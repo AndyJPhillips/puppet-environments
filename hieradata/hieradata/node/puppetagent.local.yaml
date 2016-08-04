@@ -1,0 +1,25 @@
+---
+classes:
+  - roles::lampstack
+motd::message: "\nThis is the amazing MOTD that's just for puppetagent.local\n\n"
+profiles::mysql::dbname: "myapp"
+profiles::mysql::dbuser: "myuser"
+profiles::mysql::dbpass: "mypass"
+profiles::mysql::dbhost: "localhost"
+profiles::mysql::dbgrants: 
+  - 'SELECT'
+  - 'UPDATE'
+profiles::ssh::users: 
+  'myapp':
+    ensure: "present"
+    password: "$6$saltsalt$t6Sww7xOSuip49dTO/RgRxQPbz0kisV1S6M2LfQzIKHUJFk4sHJTacAGek7KWOBYPp1WVeZmsKWzykEmiwJCI."
+    home: "/home/myapp"
+  'bilbo':
+    ensure: "present"
+    password: "$6$saltsalt$t6Sww7xOSuip49dTO/RgRxQPbz0kisV1S6M2LfQzIKHUJFk4sHJTacAGek7KWOBYPp1WVeZmsKWzykEmiwJCI."
+    home: "/home/bilbo"
+  'dummy':
+    ensure: "present"
+    password: "$6$r/F0.lu0$8sMNc7R72zcBWxJPEYf.I0T63ZzOgYdzBwijSIwxEsT/tCZRtqPh2OvR.WKyD97kCO4gw.mqi5G.7gVpOLiSb/169970999997"
+    home: "/home/dummy"
+

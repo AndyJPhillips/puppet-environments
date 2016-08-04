@@ -1,0 +1,4 @@
+---
+classes:
+  - motd
+motd::message: "\nBoring default MOTD\n\n"

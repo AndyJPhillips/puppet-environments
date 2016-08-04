@@ -1,0 +1,9 @@
+---
+classes:
+  - puppetdb::globals
+  - puppetdb
+  - puppetdb::master::config
+  - mydummyarray
+puppetdb::globals::version: "2.3.7-1.el7"
+puppetdb::listen_address: "0.0.0.0"
+motd::message: "\nThis is a super amazing MOTD just for puppetmaster.local\n\n"

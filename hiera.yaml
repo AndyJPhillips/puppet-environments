@@ -1,0 +1,13 @@
+---
+:backends:
+ - yaml
+
+:yaml:
+ :datadir: "/etc/puppet/environments/%{environment}/hieradata"
+
+:hierarchy:
+ - "node/%{::fqdn}"
+ - "osfamily/%{::osfamily}"
+ - common
+
+:merge_behaviour: deeper
