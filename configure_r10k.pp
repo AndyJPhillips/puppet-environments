@@ -11,15 +11,17 @@
 ## (e.g. 1.5.1 for recent module versions, expected to be 2.0.3 at the next major zack-r10k release)
 
 class { 'r10k':
-  version           => '1.5.1',
+  # version should be set automatically to the r10k gem version 
+  # version           => '1.5.1',
   sources           => {
     'puppet' => {
-      'remote'  => 'https://github.com/glarizza/puppet_repository.git',
+      'remote'  => 'https://github.com/AndyJPhillips/puppet-environments',
       'basedir' => "${::settings::confdir}/environments",
       'prefix'  => false,
     }
   },
   ## purgedirs is deprecated, but may be needed for older versions (see https://github.com/acidprime/r10k/pull/84)
   ## purgedirs         => ["${::settings::confdir}/environments"],
-  manage_modulepath => false,
+  # manage_modulepath is apparently deprecated
+  # manage_modulepath => false,
 }
