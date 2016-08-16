@@ -18,9 +18,9 @@ mod 'motd',
   :git => 'git@github.com:AndyJPhillips/puppet-motd.git'
 
 # Install/update my profiles module
-mod 'profiles'
+mod 'profiles',
   :git => 'git@github.com:AndyJPhillips/puppet-profiles.git'
 
 # Install/update my roles module
-mod 'roles'
+mod 'roles',
   :git => 'git@github.com:AndyJPhillips/puppet-roles.git'
