@@ -22,6 +22,7 @@ class { 'r10k':
   },
   ## purgedirs is deprecated, but may be needed for older versions (see https://github.com/acidprime/r10k/pull/84)
   ## purgedirs         => ["${::settings::confdir}/environments"],
-  # manage_modulepath is apparently deprecated
-  # manage_modulepath => false,
+  ## manage_modulepath is deprecated
+  ## manage_modulepath => true,
+  ## modulepath        => "${::settings::confdir}/environments/\$environment/modules:${::settings::confdir}/modules",
 }
